@@ -1,4 +1,4 @@
-/*! tailwindcss v4.0.3 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.0.4 | MIT License | https://tailwindcss.com */
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -626,10 +626,10 @@
     z-index: auto;
   }
   .order-first {
-    order: calc(-infinity);
+    order: -9999;
   }
   .order-last {
-    order: calc(infinity);
+    order: 9999;
   }
   .order-none {
     order: 0;
@@ -2584,6 +2584,13 @@
       justify-content: normal;
     }
   }
+  .md\:truncate {
+    @media (width >= 48rem) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
   .md\:text-left {
     @media (width >= 48rem) {
       text-align: left;
@@ -2627,6 +2634,11 @@
   .lg\:inline-block {
     @media (width >= 64rem) {
       display: inline-block;
+    }
+  }
+  .lg\:w-\[260px\] {
+    @media (width >= 64rem) {
+      width: 260px;
     }
   }
   .lg\:w-\[476px\] {
@@ -2702,6 +2714,11 @@
   .xl\:mx-auto {
     @media (width >= 80rem) {
       margin-inline: auto;
+    }
+  }
+  .xl\:w-\[260px\] {
+    @media (width >= 80rem) {
+      width: 260px;
     }
   }
   .xl\:w-\[494px\] {
